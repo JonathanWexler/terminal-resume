@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+body {
+    background-color: black;
+}
+
+#exit{
+    width:20px;
+    height:20px;
+    background-color: red;
+    position: absolute;
+    top: 25px;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+
+#minimize{
+    width:20px;
+    height:20px;
+    background-color: orange;
+    position: absolute;
+    top: 25px;
+    margin-left: 30px;
+
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+#expand{
+    width:20px;
+    height:20px;
+    background-color: green;
+    position: absolute;
+    top: 25px;
+    margin-left: 60px;
+
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+
+.test {
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: green;
+    display: block;
+    padding-top: 12px;
+}
+
+#window{
+    width: 1000px;
+    height: 900px;
+    background-color: black;
+    margin: 0 auto;
+    display: block;
+    border-top: 50px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-style: solid;
+    border-color: white;
+    padding: 40px; 
+    /*display:none;*/
+}
+
+#text{
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: green;
+    margin-top: 50px;
+    padding-top: 60px;
+    /*margin-top: -5px;*/
+}
+
+input {
+    width: 100%;
+    border: 0;
+    font-size: 50px;
+    text-decoration: none;
+    /*background-color: transparent;*/
+    color:green;
+}
+
+input:focus{
+    outline:0;
+}
+
+/*CURSOR*/
+
+.blinking-cursor {
+  /*font-weight: 200;*/
+  font-size: 30px;
+  background-color: blue;
+  width: 25px;
+  /*height: 5px;*/
+  padding-left: 15px;
+  margin-bottom: -45px;
+  /*color: #2E3D48;*/
+  color: transparent;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: darkgreen;
+}
+}
+
+@-moz-keyframes blink {
+  from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: darkgreen;
+}
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: darkgreen;
+}
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: darkgreen;
+}
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: darkgreen;
+}
+}
