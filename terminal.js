@@ -13,7 +13,7 @@ $(document).ready(function(){
         if (e.keyCode in clear) {
             clear[e.keyCode] = true;
             if (clear[93] && clear[75]) {
-                $('#window').html("<span id='exit'></span> <span id='minimize'></span><span id='expand'></span><span id='text'></span><span class='blinking-cursor'>|</span>");
+                $('#window').html("<span id='exit'></span> <span id='minimize'></span><span id='expand'></span><span id='pretext'></span><span id='text'></span><span class='blinking-cursor'>|</span>");
             }
         }
             if (e.keyCode == 13) {
@@ -21,7 +21,8 @@ $(document).ready(function(){
             // if (command.slice(16).trim() == 'ls') {
                 // alert("LSed");
                 // $('#text').prepend("<span style='color:blue; font-size: 40px;'>JonathanWexler$ </span>");
-                $('#window').prepend("<span class='test'> JonathanWexler$ </span><br/>");
+                $('#pretext').append("<span class='test'>"+ command +"</span><br/>");
+                command  = command.slice(0, 16);
             // };
         };
         // console.log("KeyCode is");
