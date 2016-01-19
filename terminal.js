@@ -30,7 +30,7 @@ $(document).ready(function(){
         if (e.keyCode == 8 && command.length > 16) {
             command = command.slice(0, -1);
         } else {
-         if (command.length <= 48) {
+         if (command.length <= 78) {
             console.log(e.keyCode)
             command += String.fromCharCode(e.which).toLowerCase();
         } else{
