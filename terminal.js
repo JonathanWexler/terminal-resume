@@ -1,5 +1,7 @@
 $(document).ready(function(){
     var command = "JonathanWexler$ ";
+    var clear = {93: false, 75: false};
+
     $('#text').text(command);
 
     $('body').hide();
@@ -7,8 +9,15 @@ $(document).ready(function(){
     $(window).focus();
 
     $(window).keydown(function(e) {
-        if (e.keyCode == 13) {
-            console.log(command.slice(16));
+        // Check to see if keys are in clear code map
+        if (e.keyCode in clear) {
+            clear[e.keyCode] = true;
+            if (clear[93] && clear[75]) {
+                $('#window').html("<span id='exit'></span> <span id='minimize'></span><span id='expand'></span><span id='text'></span><span class='blinking-cursor'>|</span>");
+            }
+        }
+            if (e.keyCode == 13) {
+                console.log(command.slice(16));
             // if (command.slice(16).trim() == 'ls') {
                 // alert("LSed");
                 // $('#text').prepend("<span style='color:blue; font-size: 40px;'>JonathanWexler$ </span>");
@@ -29,22 +38,13 @@ $(document).ready(function(){
         };
     };
 
-        // alert('hi');
         $('#text').text(command);
-    });
-
-
-    var map = {68: false, 69: false, 86: false};
-    $(document).keydown(function(e) {
-        if (e.keyCode in map) {
-            map[e.keyCode] = true;
-            if (map[68] && map[69] && map[86]) {
-            // FIRE EVENT
-        }
-    }
     }).keyup(function(e) {
-        if (e.keyCode in map) {
-            map[e.keyCode] = false;
+        // When key is lifted, clear it in code map
+        if (e.keyCode in clear) {
+            clear[e.keyCode] = false;
         }
     });
+
+
 });
