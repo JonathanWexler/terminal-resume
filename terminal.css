@@ -75,7 +75,7 @@ body {
 
 #window{
     width: 1000px;
-    height: 900px;
+    min-height: 500px;
     background-color: black;
     margin: 0 auto;
     display: block;
