@@ -2,6 +2,8 @@
 
 body {
     background-color: black;
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 #exit{
@@ -15,6 +17,25 @@ body {
     border-top-right-radius: 3em;
     border-bottom-right-radius: 3em;
 }
+.centered{
+    text-align: center;
+    /*margin: 0 auto;*/
+}
+
+#path{
+    width:600px;
+    height:20px;
+    /*background-color: blue;*/
+    color: darkgrey;
+    text-align: center;
+    position: absolute;
+    margin-left: -300px;
+    margin-top: 20px;
+    font-size: 10px;
+    /*top: 25px;*/
+    /*margin-left: 130px;*/
+    /*z-index: 100;*/
+}
 
 #minimize{
     width:20px;
@@ -23,7 +44,6 @@ body {
     position: absolute;
     top: 25px;
     margin-left: 30px;
-
     border-top-left-radius: 3em;
     border-bottom-left-radius: 3em;
     border-top-right-radius: 3em;
